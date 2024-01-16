@@ -36,6 +36,9 @@
 	<bean id="jt" class="org.springframework.jdbc.core.JdbcTemplate">
 		<property name="dataSource" ref="ds"></property>
 	</bean>
+	<bean id="dao" class="com.myapp.services.UserDao">
+		<property name="template" ref="jt"></property>
+	</bean>
 
 	
 </beans>
