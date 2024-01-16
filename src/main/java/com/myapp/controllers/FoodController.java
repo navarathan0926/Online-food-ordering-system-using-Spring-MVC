@@ -19,9 +19,10 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 import com.myapp.beans.Food;
-import com.myapp.beans.User;
 
-import com.myapp.services.FoodDao;
+import com.myapp.beans.User;
+import com.myapp.services.UserDao;
+
 
 @Controller
 @RequestMapping("/food")

@@ -27,7 +27,9 @@
 						<td><a class="home-btn"
 							href="${pageContext.request.contextPath}/user/login">For
 								Login</a></td>
-						
+						<td><a class="home-btn"
+							href="${pageContext.request.contextPath}/user/reg">For
+								Register</a></td>
 					</tr>
 				</table>
 

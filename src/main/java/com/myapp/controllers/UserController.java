@@ -22,7 +22,7 @@ import com.myapp.services.UserDao;
 @RequestMapping("/user")
 public class UserController {
 	@Autowired
-//	UserDao dao;
+	UserDao dao;
 	
 	@RequestMapping("/login")  
     public String toLogin()  
@@ -37,38 +37,38 @@ public class UserController {
     }  
 	
 	
-//	@RequestMapping(value = "/all", method = RequestMethod.GET)
-//    public String viewAllUser(Model model) {
-//        List<User> allUser = dao.allUser();
-//        model.addAttribute("allUser", allUser);
-//        return "user_page";
-//    }
-//
-//	@RequestMapping(value = "/register", method = RequestMethod.POST)
-//	public String register(@ModelAttribute("user") User user, Model m) {
-//		if(dao.save(user)) {
-//			m.addAttribute("msg", "Registration successfuly.");
-//			return "display";
-//		}else {
-//			m.addAttribute("msg", "Please try again.");
-//			return "display";
-//		}
-//		
-//	}
-//	
-//
-//	@RequestMapping(value = "/home", method = RequestMethod.POST)
-//	public String login(@ModelAttribute("user") User user, Model m, HttpSession session) {
-//		boolean loginFlag=dao.userValidation(user);
-//		if(loginFlag) {
-//			session.setAttribute("uname", user.getUsername());
-//
-//			return "redirect:/food/special";
-//		}else {
-//			return "fail";
-//		}
-//		
-//	}
+	@RequestMapping(value = "/all", method = RequestMethod.GET)
+    public String viewAllUser(Model model) {
+        List<User> allUser = dao.allUser();
+        model.addAttribute("allUser", allUser);
+        return "user_page";
+    }
+
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
+	public String register(@ModelAttribute("user") User user, Model m) {
+		if(dao.save(user)) {
+			m.addAttribute("msg", "Registration successfuly.");
+			return "display";
+		}else {
+			m.addAttribute("msg", "Please try again.");
+			return "display";
+		}
+		
+	}
+	
+
+	@RequestMapping(value = "/home", method = RequestMethod.POST)
+	public String login(@ModelAttribute("user") User user, Model m, HttpSession session) {
+		boolean loginFlag=dao.userValidation(user);
+		if(loginFlag) {
+			session.setAttribute("uname", user.getUsername());
+
+			return "redirect:/food/special";
+		}else {
+			return "fail";
+		}
+		
+	}
 	
 	 @RequestMapping(value="/logout",method = RequestMethod.GET)
      public String logout(HttpServletRequest request){
