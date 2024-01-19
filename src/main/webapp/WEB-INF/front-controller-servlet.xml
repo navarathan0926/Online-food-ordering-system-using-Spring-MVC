@@ -39,6 +39,11 @@
 	<bean id="dao" class="com.myapp.services.UserDao">
 		<property name="template" ref="jt"></property>
 	</bean>
-
+    <bean id="helpDao" class="com.myapp.services.HelpDao">
+		<property name="template" ref="jt"></property>
+	</bean>
+	<bean id="fdao" class="com.myapp.services.FoodDao">
+		<property name="template" ref="jt"></property>
+	</bean>
 	
 </beans>

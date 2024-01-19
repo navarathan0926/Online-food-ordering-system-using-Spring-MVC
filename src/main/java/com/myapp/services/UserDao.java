@@ -10,8 +10,6 @@ import org.springframework.jdbc.core.RowMapper;
 import com.myapp.beans.Food;
 import com.myapp.beans.User;
 
-import com.myapp.beans.User;
-import com.myapp.services.UserDao;
 
 public class UserDao {
 

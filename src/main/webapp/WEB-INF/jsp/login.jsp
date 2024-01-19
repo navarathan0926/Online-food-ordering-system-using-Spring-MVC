@@ -20,10 +20,11 @@
 		      <input type="text" name="username" placeholder="Enter username"  class="box">
 		      <input type="password" name="password" placeholder="enter your password" class="box">
 		      <input type="submit" name="submit" value="login now" class="home-btn">
-	      <p>Don't have an account? <a href="${pageContext.request.contextPath}/user/reg">Register now</a></p>
-</form>
-
-</div>
-<%@include file="/WEB-INF/jsp/footer.jsp"%>
+		      <p>Don't have an account? <a href="${pageContext.request.contextPath}/user/reg">Register now</a></p>
+		      
+        </form>
+     </div>
+     
+      <%@include file="footer.jsp"%>
 </body>
 </html>
