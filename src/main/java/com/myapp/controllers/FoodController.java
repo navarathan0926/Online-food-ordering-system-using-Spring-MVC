@@ -19,40 +19,36 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 import com.myapp.beans.Food;
-
 import com.myapp.beans.User;
-import com.myapp.services.UserDao;
 
+import com.myapp.services.FoodDao;
 
 @Controller
 @RequestMapping("/food")
 public class FoodController {
-//	@Autowired
-//	FoodDao fdao;
-//	
-//	
-//	
-//	 @RequestMapping(value = "/all", method = RequestMethod.GET)
-//	    public String viewAllFoods(Model model) {
-//	        List<Food> allFood = fdao.getAllFoods();
-//	        model.addAttribute("allFoods", allFood);
-//
-//	        return "foods_page";
-//	    }
-//	 
-//	 
-//	 
-//	 
-//	 
-//	 @RequestMapping(value = "/special", method = RequestMethod.GET)
-//	    public String specialFoods( Model model) {
-//		 List<Food> specialFood=fdao.specialFoods();
-//	        model.addAttribute("specialFood", specialFood);
-//	        
-//	        List<Food> mustTryableFood=fdao.mustTryableFood();
-//	        model.addAttribute("mustFood", mustTryableFood);
-//	        return "home";
-//	    }
+	@Autowired
+	FoodDao fdao;
+	
+	
+	
+	 @RequestMapping(value = "/all", method = RequestMethod.GET)
+	    public String viewAllFoods(Model model) {
+	        List<Food> allFood = fdao.getAllFoods();
+	        model.addAttribute("allFoods", allFood);
+
+	        return "foods_page";
+	    }
+
+	 
+	 @RequestMapping(value = "/special", method = RequestMethod.GET)
+	    public String specialFoods( Model model) {
+		 List<Food> specialFood=fdao.specialFoods();
+	        model.addAttribute("specialFood", specialFood);
+	        
+	        List<Food> mustTryableFood=fdao.mustTryableFood();
+	        model.addAttribute("mustFood", mustTryableFood);
+	        return "home";
+	    }
 	 
 
 }
