@@ -45,5 +45,8 @@
 	<bean id="fdao" class="com.myapp.services.FoodDao">
 		<property name="template" ref="jt"></property>
 	</bean>
+	<bean id="feedbackDao" class="com.myapp.services.FeedbackDao">
+		<property name="template" ref="jt"></property>
+	</bean>
 	
 </beans>
