@@ -32,7 +32,14 @@
 					width="100">
 				<nav class="navbar">
 
-				
+				<a href="${pageContext.request.contextPath}/food/special" title="to home page">Home</a>
+					<a href="${pageContext.request.contextPath}/feedback/all">About Us</a>
+					<a href="${pageContext.request.contextPath}/food/all">Foods</a>
+					<a href="${pageContext.request.contextPath}/feedback/feed">Feedback</a>
+					
+					<a href="${pageContext.request.contextPath}/help/inf">Help</a>
+					
+					<a href="${pageContext.request.contextPath}/user/logout">Logout</a>
 				</nav>
 			</div>
 
